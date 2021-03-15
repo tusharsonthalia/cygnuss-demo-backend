@@ -6,6 +6,11 @@ const hashString = require('../utils/hashing');
 const connection = require('../config/database');
 
 /** configuring the API endpoints for verifying user login  */
+router.route('/validate').get((req, res) => {
+    res.status(200)
+    res.send('Hello World')
+})
+
 router.route('/validate').post((req, res) => {
     // storing the username and password received from the front end
     const username = String(req.body.username);
